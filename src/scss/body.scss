@@ -1,0 +1,76 @@
+body {
+    background : #333333;
+    width: 100vw;
+    height: 100vh;
+}
+
+.logo {
+    width: 30%;
+    position: fixed;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+}
+
+.center__bubble {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: relative;
+    border-radius: 100%;
+
+    .center__bubbles{
+        position: fixed;
+    }
+}
+
+
+
+.center__bubbles :nth-child(1) {
+    width: 40px;
+    height: 40px;
+    left: 20vw;
+    top: 25vh;
+    filter: blur(2px);
+}
+
+.center__bubbles :nth-child(2) {
+    width: 20px;
+    height: 20px;
+    left: 70vw;
+    top: 30vh;
+    filter: blur(1px);
+}
+
+.center__bubbles :nth-child(3) {
+    width: 30px;
+    height: 30px;
+    left: 30vw;
+    top: 52vh;
+}
+
+
+
+@media(min-width: 750px){
+    .logo{
+        width: 10%;
+    }
+
+    
+    .center__bubbles :nth-child(1) {
+        left: 30vw;
+        top: 35vh;
+    }
+    
+    .center__bubbles :nth-child(2) {
+        left: 80vw;
+        top: 40vh;
+    }
+    
+    .center__bubbles :nth-child(3) {
+        left: 40vw;
+        top: 62vh;
+    }
+
+
+}

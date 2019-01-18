@@ -1,0 +1,53 @@
+@mixin animation-mixin($name, $deg) {
+    @keyframes #{$name} {
+        to {
+            transform: rotate($deg);
+        }
+    }
+}
+
+@include animation-mixin(move1, 360deg);
+@include animation-mixin(move2, -360deg);
+@include animation-mixin(move3, 360deg);
+
+
+
+.center__bubbles {
+
+    & :nth-child(1){
+        transform-origin: 30vw 25vh;
+        animation: move1 10s  infinite linear;
+    }
+
+    & :nth-child(2){
+        transform-origin: -20vw 15vh;
+        animation: move2 6s  infinite linear;
+    }
+
+    & :nth-child(3){
+        transform-origin: 20vw -10vh;
+        animation: move3 5s  infinite linear;
+    }
+
+}
+
+
+@media (min-width: 750px){
+
+    .center__bubbles {
+
+        & :nth-child(1){
+            transform-origin: 20vw 15vh;
+        }
+    
+        & :nth-child(2){
+            transform-origin: -30vw 5vh;
+        }
+    
+        & :nth-child(3){
+            transform-origin: 10vw -20vh;
+        }
+    
+    }
+
+}
