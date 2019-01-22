@@ -16,10 +16,10 @@ body {
     transition: all 0.3s;
     
 
-    &:hover {
-        filter: invert(100%);
-        cursor: pointer;
-    }
+    // &:hover {
+    //     filter: invert(100%);
+    //     cursor: pointer;
+    // }
 }
 
 .center {
@@ -44,10 +44,6 @@ body {
 
     .center__bubbles{
         position: fixed;
-
-        &:hover {
-            filter: invert(100%);
-        }
     }
 }
 
@@ -75,6 +71,26 @@ body {
     height: 30px;
     left: 30vw;
     top: 40vh;
+    filter: blur(1px); 
+    
+}
+
+.button {
+    color: white;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    top: 85vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+
+    &:hover {
+        cursor: pointer; 
+    }
 }
 
 
