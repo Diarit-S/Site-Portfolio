@@ -16,17 +16,17 @@
 
     & :nth-child(1){
         transform-origin: 30vw 25vh;
-        animation: move1 10s  infinite linear;
+        animation: move1 15s  infinite linear;
     }
 
     & :nth-child(2){
-        transform-origin: -20vw 15vh;
-        animation: move2 6s  infinite linear;
+        transform-origin: -10vw 20vh;
+        animation: move2 16s  infinite linear;
     }
 
     & :nth-child(3){
-        transform-origin: 20vw -10vh;
-        animation: move3 5s  infinite linear;
+        transform-origin: 20vw 10vh;
+        animation: move3 12s  infinite linear;
     }
 
 }
@@ -37,15 +37,15 @@
     .center__bubbles {
 
         & :nth-child(1){
-            transform-origin: 20vw 15vh;
+            transform-origin: 25vw 15vh;
         }
     
         & :nth-child(2){
-            transform-origin: -30vw 5vh;
+            transform-origin: 10vw 10vh;
         }
     
         & :nth-child(3){
-            transform-origin: 10vw -20vh;
+            transform-origin: 15vw -12vh;
         }
     
     }

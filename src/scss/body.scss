@@ -1,7 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+
 body {
-    background : #333333;
-    width: 100vw;
-    height: 100vh;
+    background-color : #333333;
 }
 
 .logo {
@@ -10,21 +13,46 @@ body {
     left: 50vw;
     top: 50vh;
     transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    
+
+    &:hover {
+        filter: invert(100%);
+        cursor: pointer;
+    }
 }
+
+.center {
+    position: fixed;
+}
+
+//Permet de gérer le scroll
+/* .waypoint {
+    position: relative;
+    height: 100px;
+    top: 500px;
+    background-color: red;
+    opacity: 0;
+} */
 
 .center__bubble {
     width: 10px;
     height: 10px;
     background-color: white;
-    position: relative;
+    position: fixed;
     border-radius: 100%;
 
     .center__bubbles{
         position: fixed;
+
+        &:hover {
+            filter: invert(100%);
+        }
     }
 }
 
 
+// Sans media
 
 .center__bubbles :nth-child(1) {
     width: 40px;
@@ -37,7 +65,7 @@ body {
 .center__bubbles :nth-child(2) {
     width: 20px;
     height: 20px;
-    left: 70vw;
+    left: 60vw;
     top: 30vh;
     filter: blur(1px);
 }
@@ -46,10 +74,13 @@ body {
     width: 30px;
     height: 30px;
     left: 30vw;
-    top: 52vh;
+    top: 40vh;
 }
 
 
+
+
+// Avec Media 750 px
 
 @media(min-width: 750px){
     .logo{
@@ -58,17 +89,17 @@ body {
 
     
     .center__bubbles :nth-child(1) {
-        left: 30vw;
+        left: 25vw;
         top: 35vh;
     }
     
     .center__bubbles :nth-child(2) {
-        left: 80vw;
+        left: 40vw;
         top: 40vh;
     }
     
     .center__bubbles :nth-child(3) {
-        left: 40vw;
+        left: 35vw;
         top: 62vh;
     }
 
