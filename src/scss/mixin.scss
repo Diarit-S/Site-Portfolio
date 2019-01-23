@@ -1,0 +1,39 @@
+
+// ------ screen-width ------ //
+
+@mixin medium-screen {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin large-screen {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+
+// ------ animation mixin ------ //
+
+@mixin rotate-animation($name, $deg) {
+    @keyframes #{$name} {
+        to {
+            transform: rotate($deg);
+        }
+    }
+}
+
+
+@mixin leave-animation($name, $Xpos, $Ypos) {
+    @keyframes #{$name} {
+        to {
+            transform: translate($Xpos, $Ypos);
+        }
+    }
+}
+
+
+
+
+
