@@ -25,10 +25,13 @@
 }
 
 
-@keyframes typewriter{
-    from{width: 0;}
-    to{width: 5.13em;}
+@mixin typewriting($name, $from, $to) {
+    @keyframes #{$name} {
+        from{width: $from;}
+        to{width: $to;}
+    }
 }
+
 
 @keyframes blinkTextCursor{
     from{border-right-color: rgba(255,255,255,.75);}

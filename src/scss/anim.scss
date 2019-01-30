@@ -1,5 +1,7 @@
 @include rotate-animation(clockwise, 360deg);
 @include rotate-animation(counterclockwise, -360deg);
+@include typewriting(typewriter, 0em, 5.25em);
+@include typewriting(typewritertwo, 0em, 7.2em);
 
 
 
@@ -84,11 +86,11 @@
     background-color: red;
 }
 
-p {
+.line {
     color: white;
     position: fixed;
-    top: 20%;  
-    left: 10vw;
+    top: 30vh;  
+    left: 15vw;
     margin: 0 auto;
     display: none;
     // border-right: 2px solid rgba(255,255,255,.75);
@@ -97,8 +99,18 @@ p {
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
-    animation: typewriter 1.2s steps(10) 1s 1 normal both,
     // blinkTextCursor 500ms steps(10) infinite normal;
+
+    
+}
+
+.firstline{
+    animation: typewriter 1.2s steps(10) 1s 1 normal both,
+}
+
+.secondline{
+    top : 40vh;
+    animation: typewritertwo 1.2s steps(10) 2.2s 1 normal both,
 }
 
 .valid {
