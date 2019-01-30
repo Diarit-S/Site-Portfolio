@@ -1,6 +1,6 @@
 
 body {
-    background-color : #333333;
+    background-color : #242424;
 }
 
 .logo {
@@ -9,12 +9,21 @@ body {
     left: 50vw;
     top: 50vh;
     transform: translate(-50%, -50%);
-    transition: all 0.3s;
+    transition: all 0.7s;
 
     @include medium-screen {
         width: 10%;
     }
-    
+
+    &.zoom {
+        width: 2%;
+        opacity: 0;
+    }
+
+}
+
+.hidden {
+    opacity: 0;
 }
 
 .center {
@@ -24,44 +33,63 @@ body {
 .center__bubble {
 	background-color: white;
 	position: fixed;
-	border-radius: 100%;
+    border-radius: 100%;
+    transition: opacity 0.5s ease-out;
 }
 
-.center__bubbles :nth-child(1) {
-    width: 40px;
-    height: 40px;
-    left: 20vw;
-    top: 25vh;
-    filter: blur(0px);
+.center__bubbles {
 
-    @include medium-screen {
-        left: 25vw;
-        top: 35vh;
+    :nth-child(1) {
+        width: 40px;
+        height: 40px;
+        left: 20vw;
+        top: 25vh;
+        filter: blur(0px);
+
+        @include medium-screen {
+            left: 25vw;
+            top: 35vh;
+        }
     }
-}
+    :nth-child(2) {
+        width: 20px;
+        height: 20px;
+        left: 60vw;
+        top: 30vh;
+        filter: blur(0px);
 
-.center__bubbles :nth-child(2) {
-    width: 20px;
-    height: 20px;
-    left: 60vw;
-    top: 30vh;
-    filter: blur(0px);
-
-    @include medium-screen {
-        left: 40vw;
+        @include medium-screen {
+            left: 40vw;
+            top: 40vh;
+        }
+    }
+    :nth-child(3) {
+        width: 30px;
+        height: 30px;
+        left: 30vw;
         top: 40vh;
+        filter: blur(0px); 
+    
+        @include medium-screen {
+            left: 35vw;
+            top: 62vh;
+        }
     }
 }
 
-.center__bubbles :nth-child(3) {
-    width: 30px;
-    height: 30px;
-    left: 30vw;
-    top: 40vh;
-    filter: blur(0px); 
-    
-    @include medium-screen {
-        left: 35vw;
-        top: 62vh;
-    }
+.photo {
+    width: 50%;
+    position: fixed;
+    bottom: 0;
+    z-index: -2;
+    display: block;
+    opacity: 0;
+    left: 50vw;
+    transition: all 1s ease-in-out;
 }
+
+.visible {
+    opacity: 100;
+}
+
+
