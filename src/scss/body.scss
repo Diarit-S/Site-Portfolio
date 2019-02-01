@@ -94,3 +94,27 @@ body {
 }
 
 
+.icones {
+    width: 50px;
+    height: 20vh;
+    position: fixed;
+    left: 1vw;
+    top: 2vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    a{
+        fill: #adadad;
+        transition : all 0.3s;
+    
+        &:hover{
+            fill: white;
+        };
+    }
+
+}
+
+
+
