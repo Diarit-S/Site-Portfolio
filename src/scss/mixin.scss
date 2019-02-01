@@ -25,17 +25,29 @@
 }
 
 
-@mixin typewriting($name, $from, $to) {
+@mixin typewriting($name, $from, $to, $color) {
     @keyframes #{$name} {
         from{width: $from;}
-        to{width: $to;}
+        to{
+            width: $to;
+            border-color: $color;
+        }
     }
 }
 
 
 @keyframes blinkTextCursor{
-    from{border-right-color: rgba(255,255,255,.75);}
-    to{border-right-color: transparent;}
+    from{border-right: 2px solid transparent;}
+    10%{border-right: 2px solid rgba(255,255,255,.75);}
+    20%{border-right: 2px solid transparent;}
+    30%{border-right: 2px solid rgba(255,255,255,.75);}
+    40%{border-right: 2px solid transparent;}
+    50%{border-right: 2px solid rgba(255,255,255,.75);}
+    60%{border-right: 2px solid transparent;}
+    70%{border-right: 2px solid rgba(255,255,255,.75);}
+    80%{border-right: 2px solid transparent;}
+    90%{border-right: 2px solid rgba(255,255,255,.75);}
+    to{border-right: 2px solid transparent;}
 }
 
 

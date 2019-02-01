@@ -8,6 +8,7 @@ function hid() {
   bubbles.forEach(bubble => {
     bubble.classList.add('hidden');
   });
+  
   photo.classList.add('visible');
 
   texts.forEach(text => {
@@ -24,3 +25,4 @@ enter.addEventListener('click', function () {
   enter.classList.add('hidden');
   
 });
+

@@ -1,8 +1,8 @@
 @include rotate-animation(clockwise, 360deg);
 @include rotate-animation(counterclockwise, -360deg);
-@include typewriting(typewriter, 0em, 5.25em);
-@include typewriting(typewritertwo, 0em, 7.2em);
-
+@include typewriting(typewriter, 0em, 5.25em, red);
+@include typewriting(typewritertwo, 0em, 7.2em, transparent);
+@include typewriting(typewriterthree, 0em, 19em, transparent);
 
 
 .center__bubbles {
@@ -93,24 +93,28 @@
     left: 15vw;
     margin: 0 auto;
     display: none;
-    // border-right: 2px solid rgba(255,255,255,.75);
+    border-right: 0px solid;
     font-size: 180%;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
-    // blinkTextCursor 500ms steps(10) infinite normal;
-
     
 }
 
 .firstline{
-    animation: typewriter 1.2s steps(10) 1s 1 normal both,
+    animation: typewriter 1.2s steps(10) 1s 1 normal both, blinkTextCursor 2.2s normal;
+    // animation: ;
 }
 
 .secondline{
     top : 40vh;
-    animation: typewritertwo 1.2s steps(10) 2.2s 1 normal both,
+    animation: typewritertwo 1.2s steps(10) 2.2s 1 normal both, blinkTextCursor 1.2s  2.2s  normal;
+}
+
+.thirdline {
+    top: 50vh;
+    animation: typewriterthree 2s steps(25) 3.5s 1 normal both, blinkTextCursor 2s  3.5s  normal;
 }
 
 .valid {
