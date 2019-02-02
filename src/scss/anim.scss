@@ -85,6 +85,7 @@
 .buttontwo {
     opacity: 0;
     left: 15vw;
+    z-index: -2;
 
     &::before {
         width: 101%;
