@@ -1,8 +1,8 @@
 @include rotate-animation(clockwise, 360deg);
 @include rotate-animation(counterclockwise, -360deg);
-@include typewriting(typewriter, 0em, 5.25em, red);
-@include typewriting(typewritertwo, 0em, 7.2em, transparent);
-@include typewriting(typewriterthree, 0em, 19em, transparent);
+@include typewriting(typewriter, 0em, 5.25em); // line one, in large screen
+@include typewriting(typewritertwo, 0em, 7.2em); // line two, in large screen
+@include typewriting(typewriterthree, 0em, 10.05em); // line three, in large screen
 
 
 .center__bubbles {
@@ -90,7 +90,8 @@
     position: fixed;
     top: 30vh;  
     left: 15vw;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
     display: none;
     border-right: 0px solid;
     font-size: 180%;

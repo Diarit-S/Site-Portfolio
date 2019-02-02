@@ -25,12 +25,11 @@
 }
 
 
-@mixin typewriting($name, $from, $to, $color) {
+@mixin typewriting($name, $from, $to) {
     @keyframes #{$name} {
         from{width: $from;}
         to{
             width: $to;
-            border-color: $color;
         }
     }
 }
