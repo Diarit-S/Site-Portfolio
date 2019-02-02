@@ -1,8 +1,8 @@
 @include rotate-animation(clockwise, 360deg);
 @include rotate-animation(counterclockwise, -360deg);
-@include typewriting(typewriter, 0em, 5.25em); // line one, in large screen
-@include typewriting(typewritertwo, 0em, 7.2em); // line two, in large screen
-@include typewriting(typewriterthree, 0em, 10.05em); // line three, in large screen
+@include typewriting(typewriter, 0em, 5.8em); // line one, in large screen
+@include typewriting(typewritertwo, 0em, 7.4em); // line two, in large screen
+@include typewriting(typewriterthree, 0em, 10.42em); // line three, in large screen
 
 
 .center__bubbles {
@@ -35,7 +35,7 @@
 }
 
 
-.button {
+.button, .buttontwo {
     color: white;
     font-size: 25px;
     position: relative;
@@ -45,7 +45,7 @@
     transform: translateX(-50%);
     padding: 5px 10px 5px 10px;
     font-family: 'Rubik', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     display: inline-block;
     border: 2.5px solid white;
     border-radius: 6px;
@@ -81,9 +81,28 @@
     
 }
 
-.description {
-    background-color: red;
+
+.buttontwo {
+    opacity: 0;
+    left: 15vw;
+
+    &::before {
+        width: 101%;
+    }
 }
+
+.is-inlineblock {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+
 
 .line {
     color: white;

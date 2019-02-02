@@ -27,6 +27,7 @@ body {
     opacity: 0;
 }
 
+
 .center {
     position: fixed;
 }
@@ -85,7 +86,7 @@ body {
     z-index: -2;
     opacity: 0;
     left: 50vw;
-    transition: all 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
 .visible {
@@ -115,5 +116,27 @@ body {
 
 }
 
+.ball {
 
+    @include medium-screen {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        position: fixed;
+        border-radius: 50%;
+        transition: opacity 0.5s ease-out;
+        left: 65vw;
+        top: 45vh;
+        z-index: -22;
+        animation: spin 5s linear infinite;
+        display: none;
+        transform-origin: 10vw 25vh;
+    }
+
+}
+
+.boldy {
+    color: rgb(192, 16, 10);
+    font-weight: 900;
+}
 

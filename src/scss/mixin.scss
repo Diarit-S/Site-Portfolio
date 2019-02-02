@@ -35,6 +35,8 @@
 }
 
 
+
+
 @keyframes blinkTextCursor{
     from{border-right: 2px solid transparent;}
     10%{border-right: 2px solid rgba(255,255,255,.75);}
@@ -47,6 +49,30 @@
     80%{border-right: 2px solid transparent;}
     90%{border-right: 2px solid rgba(255,255,255,.75);}
     to{border-right: 2px solid transparent;}
+}
+
+
+@keyframes spin{
+    // 10%{
+    //     transform: translate(5vw, 2vh);
+    // }
+    // 20%{
+    //     transform: translate(10vw, 5vh);
+    // }
+    // 30%{
+    //     transform: translate(20vw, 8vh);
+    // }
+
+    // to{
+    //     transform: translate(5vw, 5vh);
+    //    z-index: 2;
+    // }
+
+    0%  {transform: rotate(0deg);}
+    35% { z-index: -2;}
+    50% {background-color: rgb(192, 16, 10)}
+    90% {z-index: -2;}
+    100% {transform: rotate(360deg);}
 }
 
 
