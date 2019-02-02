@@ -84,7 +84,6 @@ body {
     bottom: 0;
     z-index: -2;
     opacity: 0;
-    display: block;
     left: 50vw;
     transition: all 1s ease-in-out;
 }
@@ -106,7 +105,7 @@ body {
     align-items: center;
 
     a{
-        fill: #adadad;
+        fill: #535353;
         transition : all 0.3s;
     
         &:hover{
