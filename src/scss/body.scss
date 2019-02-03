@@ -143,6 +143,13 @@ body {
 
 
 
+
+
+
+
+
+
+
 /* // -----------    PAGE WORKS -------------- // */
 
 
@@ -150,15 +157,20 @@ body {
 .panels {
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
-    min-height: 100vh;
     overflow: hidden;
-  }
+
+    @include medium-screen {
+        flex-direction: row;  
+        align-items: center;  
+        min-height: 100vh;
+    }
+}
   
   
-  .panels__panel  {
+.panels__panel  {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -170,68 +182,74 @@ body {
     transition: flex 0.5s cubic-bezier(0.61,-0.19, 0.7,-0.11), opacity 0.2s ease-in-out;
     background-position: center;
     opacity: 0.2;
-  }
+}
   
-  .panels__panel:hover{
+.panels__panel:hover{
     opacity: 0.5;
     
-  }
-  .panels__panel p:hover{
-    cursor: pointer;
-  }
+}
   
-  .panels__panel--one {
+.panels__panel p:hover{
+    cursor: pointer;
+}
+  
+.panels__panel--one {
     background-image: url(../assets/photo.png);
     background-size: cover;
-  }
-  .panels__panel--two {
+}
+  
+.panels__panel--two {
     background-image: url(../assets/yelllow.jpg);
     background-size: cover;
-  }
-  .panels__panel--three {
+}
+  
+.panels__panel--three {
     background-image: url(../assets/photo.png);
     background-size: cover;
-  }
-  .panels__panel--four {
+}
+  
+.panels__panel--four {
     background-image: url(../assets/photo.png);
     background-size: cover;
-  }
-  .panels__panel--five {
+}
+  
+.panels__panel--five {
     background-image: url(../assets/photo.png);
     background-size: cover;
-  }
+}
   
   
-  .panels__panel p {
+.panels__panel p {
     text-transform: uppercase;
     font-family: sans-serif;
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
     font-size: 1em;
-  }
+}
   
-  .panels__panel p:nth-child(2) {
-    font-size: 2em;
-  }
+.panels__panel p:nth-child(2) {
+font-size: 2em;
+}
+
   
+.panels__panel > *:first-child {
+transform: translateY(-50vh);
+transition: all 0.5s cubic-bezier(.63,-0.33,.45,1.3);
+}
   
-  .panels__panel > *:first-child {
-    transform: translateY(-50vh);
-    transition: all 0.5s cubic-bezier(.63,-0.33,.45,1.3);
-  }
-  
-  .panels__panel.is-open > *:first-child{
-    transform: translateY(0vh);
-  }
-  
-  .panels__panel > *:last-child {
-    transform: translateY(50vh);
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .panels__panel.is-open > *:last-child{
-    transform: translateY(0vh);
-  }
-  .panels__panel.is-open{
-    flex: 5;
-    opacity: 0.8;
-  }
+.panels__panel.is-open > *:first-child{
+transform: translateY(0vh);
+}
+
+.panels__panel > *:last-child {
+transform: translateY(50vh);
+transition: all 0.5s ease-in-out;
+}
+
+.panels__panel.is-open > *:last-child{
+transform: translateY(0vh);
+}
+.panels__panel.is-open{
+flex: 5;
+opacity: 0.8;
+}
+
