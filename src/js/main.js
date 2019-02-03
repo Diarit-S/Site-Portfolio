@@ -1,6 +1,6 @@
 var bubbles = document.querySelectorAll('.center__bubble');
 var enter = document.querySelector('.button');
-var logo = document.querySelector('.logo')
+var logo = document.querySelector('.logo');
 var photo = document.querySelector('.photo');
 var texts = document.querySelectorAll('p');
 var ball = document.querySelector('.ball');
@@ -35,4 +35,8 @@ enter.addEventListener('click', function () {
   enter.classList.add('hidden');
   
 });
+
+
+
+
 

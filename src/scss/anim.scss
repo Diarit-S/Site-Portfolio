@@ -4,7 +4,6 @@
 @include typewriting(typewritertwo, 0em, 7.4em); // line two, in large screen
 @include typewriting(typewriterthree, 0em, 10.42em); // line three, in large screen
 
-
 .center__bubbles {
 
     :nth-child(1){
@@ -33,7 +32,6 @@
     }
 
 }
-
 
 .button, .buttontwo {
     color: white;
@@ -81,7 +79,6 @@
     
 }
 
-
 .buttontwo {
     opacity: 0;
     left: 15vw;
@@ -95,15 +92,6 @@
 .is-inlineblock {
     opacity: 1;
 }
-
-
-
-
-
-
-
-
-
 
 .line {
     color: white;
