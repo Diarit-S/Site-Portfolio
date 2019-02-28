@@ -1,6 +1,10 @@
 
 body {
-    background-color : #242424;
+    // background-color : #242424;
+    background-image: url(../assets/bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Rubik', sans-serif;
 }
 
@@ -214,7 +218,7 @@ a {
 }
   
 .panels__panel--four {
-    background-image: url(../assets/photo.png);
+    background-image: url(../assets/kap.jpg);
     background-size: cover;
 }
   
