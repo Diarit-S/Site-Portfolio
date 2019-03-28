@@ -17,7 +17,7 @@ var s = function(sketch) {
   }
 
   sketch.draw = function () {
-    sketch.background('rgba(0,0,0, 1)');
+    sketch.background('rgba(0,0,0,1)');
     sketch.fill(255);
     var newObjets = [];
     for (a=0; a<tousMesObjets.length; a++) { 
