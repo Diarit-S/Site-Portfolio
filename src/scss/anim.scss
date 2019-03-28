@@ -91,8 +91,14 @@
 
 .buttontwo {
     opacity: 0;
-    left: 15vw;
     z-index: -2;
+    top: 50vh;
+    
+    @include medium-screen {
+        left: 15vw;
+        transform: translateX(-50%);
+        top: 85vh;
+    }
 
     &::before {
         width: 101%;
@@ -107,7 +113,7 @@
     color: white;
     position: fixed;
     top: 30vh;  
-    left: 15vw;
+    left: 5vw;
     width: auto;
     margin: 0;
     display: none;
@@ -117,6 +123,10 @@
     white-space: nowrap;
     overflow: hidden;
     transform: translateY(-50%);    
+
+    @include medium-screen {
+        left: 15vw;
+    }
     
 }
 
