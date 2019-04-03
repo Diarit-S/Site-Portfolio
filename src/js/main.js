@@ -1,40 +1,43 @@
 var bubbles = document.querySelectorAll('.center__bubble');
-var enter = document.querySelector('.button');
-var logo = document.querySelector('.logo');
-var photo = document.querySelector('.photo');
 var texts = document.querySelectorAll('p');
-var ball = document.querySelector('.ball');
-var check = document.querySelector('.buttontwo');
+
+
+function Ð(tag){
+  var x = document.querySelector(`.${tag}`);
+  return x; 
+}
 
 function hid() {
   bubbles.forEach(bubble => {
     bubble.classList.add('hidden');
   });
-  
-  photo.classList.add('visible');
-
+  Ð('solar-syst').style.opacity = '1';
   texts.forEach(text => {
     text.classList.add('valid');
   })
-
-  
-  
 }
 
-
-enter.addEventListener('click', function () {
-  
+Ð('button').addEventListener('click', function () {
+  Ð('solar-syst').style.display = "block";
   setTimeout(function () {
-    ball.classList.add('valid');
-  },1500);
-  setTimeout(function () {
-    check.classList.add('is-inlineblock')
+    Ð('buttontwo').classList.add('is-inlineblock')
   },6000);
   setTimeout(hid, 500);
-  logo.classList.add('zoom');
-  enter.classList.add('hidden');
-  
+  Ð('logo').classList.add('zoom');
+  Ð('button').classList.add('hidden');
 });
+
+
+var skill = (planet, card)=>{
+  planet.addEventListener('click', ()=>{
+    card.style.display = 'block';
+  })
+}
+
+skill(Ð('mars'), Ð('js'));
+skill(Ð('earth'), Ð('html'));
+skill(Ð('mercury'), Ð('css'));
+skill(Ð('venus'), Ð('php'));
 
 
 
