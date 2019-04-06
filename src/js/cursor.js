@@ -1,7 +1,4 @@
-// import p5 from '../../node_modules/p5';
-
 const p5 = require('../../node_modules/p5');
-
 
 var s = function(sketch) {
   var tousMesObjets = [];
@@ -26,7 +23,6 @@ var s = function(sketch) {
     }
     tousMesObjets =  newObjets ;
   };
-
 
   sketch.mouseMoved = function() {
     if (sketch.dist(sketch.mouseX, sketch.mouseY, sketch.pmouseX, sketch.pmouseY)>6) {
