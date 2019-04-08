@@ -412,8 +412,13 @@ opacity: 0.8;
             cursor: pointer;
         }
 
-        p {
+        h2 {
+            margin-bottom: 2px;
+        }
+
+        * {
             font-size: 3px;
+            max-width: 40px;
         }
     }
     

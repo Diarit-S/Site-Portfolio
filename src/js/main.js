@@ -57,9 +57,9 @@ var skill = (planet, card)=>{
 // });
 
 skill(Ð('mars'), Ð('js'));
-skill(Ð('earth'), Ð('html'));
-skill(Ð('mercury'), Ð('css'));
-skill(Ð('venus'), Ð('php'));
+skill(Ð('earth'), Ð('html-css'));
+skill(Ð('venus'), Ð('php-sql'));
+skill(Ð('mercury'), Ð('tools'));
 
 
 
