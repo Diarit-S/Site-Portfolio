@@ -14,12 +14,15 @@ function hid() {
     bubble.classList.add('hidden');
   });
   Ð('solar-syst').style.opacity = '1';
+  Ð('skills-title').style.opacity = '1';
   texts.forEach(text => {
     text.classList.add('valid');
   })
 }
 
 Ð('button').addEventListener('click', function (e) {
+
+  Ð('skills-title').style.display = "block";
   Ð('solar-syst').style.display = "block";
   setTimeout(function () {
     Ð('buttontwo').classList.add('is-inlineblock')

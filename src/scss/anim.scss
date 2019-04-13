@@ -3,6 +3,7 @@
 @include typewriting(typewriter, 0em, 5.8em); // line one, in large screen
 @include typewriting(typewritertwo, 0em, 7.4em); // line two, in large screen
 @include typewriting(typewriterthree, 0em, 10.42em); // line three, in large screen
+@include typewriting(typewriterfour, 0em, 18em); // line three, in large screen
 
 .center__bubbles {
 
@@ -138,6 +139,10 @@
     top: 50vh;
     animation: typewriterthree 2s steps(25) 3.5s 1 normal both, blinkTextCursor 2s  3.5s  normal;
 }
+.fourthline {
+    top: 60vh;
+    animation: typewriterfour 2s steps(25) 5.5s 1 normal both, blinkTextCursor 2s  5.5s  normal;
+}
 
 .valid {
     display: block;
@@ -185,7 +190,7 @@ $mars-orb : 400px; $mars-pl: 10px;
   top: 50%;
   left: 50%;
   transform: translateY(-50%);
-  transition: opacity 6s ease-in-out;
+  transition: opacity 2s ease-in-out;
   div{
     border-radius:1000px;
     top:50%;

@@ -6,7 +6,10 @@ body {
     // background-repeat: no-repeat;
     // background-size: cover;
     font-family: 'Rubik', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
+    @include medium-screen {
+        overflow: hidden;
+    }
 }
 
 a {
@@ -387,6 +390,19 @@ opacity: 0.8;
 
     // ---------- Skills ------------ 
 
+    .skills-title {
+        color: white;
+        display: none;
+        opacity: 0;
+        margin:0;
+        text-align: center;
+        width:50%;
+        height:50%;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transition: opacity 2s ease-in-out;
+    }
 
     .skill {
         transform-origin: center;
