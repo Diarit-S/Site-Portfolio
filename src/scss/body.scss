@@ -1,10 +1,6 @@
 
 body {
-    // background-color : #242424;
     background-color: black;
-    // background-attachment: fixed;
-    // background-repeat: no-repeat;
-    // background-size: cover;
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
     @include medium-screen {
@@ -17,7 +13,7 @@ a {
     color: white;
 }
 
-.logo {
+.center__logo {
     width: 30%;
     position: fixed;
     left: 50vw;
@@ -40,12 +36,11 @@ a {
     opacity: 0;
 }
 
-
 .center {
     position: fixed;
 }
 
-.center__bubble {
+.center__bubbles__bubble {
 	background-color: white;
 	position: fixed;
     border-radius: 100%;
@@ -106,7 +101,6 @@ a {
     opacity: 100;
 }
 
-
 .icones {
     z-index: 5;
     width: 50px;
@@ -114,10 +108,7 @@ a {
     position: fixed;
     left: 1vw;
     top: 2vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    @include displayFlex(column, space-around, center);
 
     a{
         fill: #535353;
@@ -130,63 +121,27 @@ a {
 
 }
 
-// .ball {
-
-//     @include medium-screen {
-//         width: 20px;
-//         height: 20px;
-//         background-color: white;
-//         position: fixed;
-//         border-radius: 50%;
-//         transition: opacity 0.5s ease-out;
-//         left: 65vw;
-//         top: 45vh;
-//         z-index: -4;
-//         animation: spin 5s linear infinite;
-//         display: none;
-//         transform-origin: 10vw 25vh;
-//     }
-
-// }
-
 .boldy {
     color: rgb(192, 16, 10);
     font-weight: 900;
 }
 
-
-
-
-
-
-
-
-
-
 /* // -----------    PAGE WORKS -------------- // */
-
-
 
 .panels {
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include displayFlex(column, center, initial);
     text-align: center;
     overflow: hidden;
-
+    
     @include medium-screen {
-        flex-direction: row;  
-        align-items: center;  
+        @include displayFlex(row, initial, center);
         min-height: 100vh;
     }
 }
   
-  
 .panels__panel  {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    @include displayFlex(column, space-around, initial);
     color: white;
     font-family: sans-serif;
     font-weight: 900;
@@ -196,6 +151,7 @@ a {
     background-position: center;
     opacity: 0.3;
     overflow: hidden;
+    background-size: cover;
 }
   
 .panels__panel:hover{
@@ -209,27 +165,22 @@ a {
   
 .panels__panel--one {
     background-image: url(../assets/louisVuitton.jpg);
-    background-size: cover;
 }
   
 .panels__panel--two {
     background-image: url(../assets/yelllow.jpg);
-    background-size: cover;
 }
   
 .panels__panel--three {
     background-image: url(../assets/nespresso.jpg);
-    background-size: cover;
 }
   
 .panels__panel--four {
     background-image: url(../assets/kap.jpg);
-    background-size: cover;
 }
   
 .panels__panel--five {
     background-image: url(../assets/photo.png);
-    background-size: cover;
 }
   
   
@@ -287,8 +238,7 @@ opacity: 0.8;
 .contact_content {
     
     position: relative;
-    display: flex;
-    flex-direction: column;
+    @include displayFlex(column, center, initial);
     color: white;
     top: 70vh;
     left: 50vw;
@@ -299,9 +249,7 @@ opacity: 0.8;
     
     
     @include medium-screen {
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+        @include displayFlex(row, space-evenly, flex-start);
         top: 50vh;
     }
 }
@@ -309,11 +257,12 @@ opacity: 0.8;
     .contact_content_Form {
         position: relative;
         color: white;
-        display: flex;
-        flex-direction: column;
+        @include displayFlex(column, space-between, initial);
         width: 80vw;
         height: 50vh;
-        justify-content: space-between;
+
+        
+        
         
         @include medium-screen {
             width: 30vw;
@@ -351,27 +300,19 @@ opacity: 0.8;
     .contact_content_info {
         width: 80vw;
         height: 50vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
+        @include displayFlex(column, space-around, initial);
         
         @include medium-screen {
-            
             width: 21vw;
         }
 
         ul {
             height: 75%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
+            @include displayFlex(column, space-around, initial);
 
             li {
                 height: 25%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                
+                @include displayFlex(column, space-around, initial);
                 
                 h2 {
                     font-weight: 500;

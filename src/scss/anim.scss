@@ -104,7 +104,7 @@
     opacity: 1;
 }
 
-.line {
+.description__line {
     color: white;
     position: fixed;
     top: 30vh;  
@@ -125,21 +125,21 @@
     
 }
 
-.firstline{
+.description__line--first{
     animation: typewriter 1.2s steps(10) 1s 1 normal both, blinkTextCursor 2.2s normal;
     // animation: ;
 }
 
-.secondline{
+.description__line--second{
     top : 40vh;
     animation: typewritertwo 1.2s steps(10) 2.2s 1 normal both, blinkTextCursor 1.2s  2.2s  normal;
 }
 
-.thirdline {
+.description__line--third {
     top: 50vh;
     animation: typewriterthree 2s steps(25) 3.5s 1 normal both, blinkTextCursor 2s  3.5s  normal;
 }
-.fourthline {
+.description__line--fourth {
     top: 60vh;
     animation: typewriterfour 2s steps(25) 5.5s 1 normal both, blinkTextCursor 2s  5.5s  normal;
 }
@@ -149,7 +149,7 @@
 }
 
 
-//  --------- Animation systeme solaire ------------
+//  --------- Solar System animation ------------
 
 $year-in-second : 30; 
 @function revolution($pl-year-in-days){
@@ -171,16 +171,7 @@ $mars-orb : 400px; $mars-pl: 10px;
   box-sizing:border-box;
 }
 
-// html, body{
-//   height:100%;
-//   width:100%;
-// }
-
-// body{
-//   background: black;
-// }
-
-.solar-syst{
+.solarSyst{
   display: none;
   opacity: 0;
   margin:0;
@@ -197,7 +188,7 @@ $mars-orb : 400px; $mars-pl: 10px;
     left:50%;
     position:absolute;
     // z-index:990;
-    &:not(.sun){
+    &:not(.solarSyst__sun){
       border: 1px solid rgba(102, 166, 229, 0.20);
     }
     &:before{
@@ -209,7 +200,7 @@ $mars-orb : 400px; $mars-pl: 10px;
   }
 }
 
-.sun{
+.solarSyst__sun{
   background: white;
   height:$sun;
   width:$sun;
@@ -222,7 +213,7 @@ $mars-orb : 400px; $mars-pl: 10px;
   box-shadow: 0 0 10px 2px rgba(255, 107, 0, 0.4), 0 0 22px 11px rgba(255, 203, 0, 0.13);
 }
 
-.mercury{
+.solarSyst__mercury{
   height: $mercury-orb;
   width: $mercury-orb;
   margin-top: -$mercury-orb / 2;
@@ -246,7 +237,7 @@ $mars-orb : 400px; $mars-pl: 10px;
   } 
 }
 
-.venus{
+.solarSyst__venus{
   height: $venus-orb;
   width: $venus-orb;
   margin-top: -$venus-orb / 2;
@@ -270,7 +261,7 @@ $mars-orb : 400px; $mars-pl: 10px;
   }
 }
 
-.earth{
+.solarSyst__earth{
   height: $earth-orb;
   width: $earth-orb;
   margin-top: -$earth-orb / 2;
@@ -306,7 +297,7 @@ $mars-orb : 400px; $mars-pl: 10px;
     animation: orb revolution(27.3216) linear infinite;
   }
 }
-.mars{
+.solarSyst__mars{
   height: $mars-orb;
   width: $mars-orb;
   margin-top: -$mars-orb / 2;

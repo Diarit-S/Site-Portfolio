@@ -28,7 +28,7 @@ var s = function(sketch) {
     if (sketch.dist(sketch.mouseX, sketch.mouseY, sketch.pmouseX, sketch.pmouseY)>6) {
       new sketch.objet();
     }
-  };
+  }; 
 
   sketch.objet = function () {
     this.opacite=255;

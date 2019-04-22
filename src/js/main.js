@@ -1,5 +1,5 @@
-var bubbles = document.querySelectorAll('.center__bubble');
-var texts = document.querySelectorAll('p');
+var bubbles = document.querySelectorAll('.center__bubbles__bubble');
+var texts = document.querySelectorAll('.description__line');
 var skills = document.querySelectorAll('skill');
 
 // Ð is the function that select the node who has the class parameter
@@ -13,7 +13,7 @@ function hid() {
   bubbles.forEach(bubble => {
     bubble.classList.add('hidden');
   });
-  Ð('solar-syst').style.opacity = '1';
+  Ð('solarSyst').style.opacity = '1';
   Ð('skills-title').style.opacity = '1';
   texts.forEach(text => {
     text.classList.add('valid');
@@ -23,16 +23,18 @@ function hid() {
 Ð('button').addEventListener('click', function (e) {
 
   Ð('skills-title').style.display = "block";
-  Ð('solar-syst').style.display = "block";
+  Ð('solarSyst').style.display = "block";
   setTimeout(function () {
     Ð('buttontwo').classList.add('is-inlineblock')
   },6000);
   setTimeout(hid, 500);
-  Ð('logo').classList.add('zoom');
+  Ð('center__logo').classList.add('zoom');
   Ð('button').classList.add('hidden');
   e.stopPropagation();
 });
 
+
+// On click on a planet, his "card" opens
 
 var skill = (planet, card)=>{
   planet.addEventListener('click', (e)=>{
@@ -52,17 +54,30 @@ var skill = (planet, card)=>{
 };
 
 
-// skills.forEach(skill => {
-//   skill.addEventListener('click', (e)=>{
-//     skill.classList.remove('is_extend');
-//     e.stopPropagation();
-//   });
-// });
+// Creation of a table with the html class of each planet and his skill section
 
-skill(Ð('mars'), Ð('js'));
-skill(Ð('earth'), Ð('html-css'));
-skill(Ð('venus'), Ð('php-sql'));
-skill(Ð('mercury'), Ð('tools'));
+var tabSkills = [
+  { planet : 'solarSyst__mars',
+    skill : 'skill--js'
+  },
+  { planet : 'solarSyst__earth',
+    skill : 'skill--html-css'
+  },
+  { planet : 'solarSyst__venus',
+    skill : 'skill--php-sql'
+  },
+  { planet : 'solarSyst__mercury',
+    skill : 'skill--tools'
+  }
+]
+
+
+// Call skill function for each element of tabSkills table
+
+tabSkills.forEach(object => {
+  skill(Ð(`${object.planet}`), Ð(`${object.skill}`));
+});
+
 
 
 
