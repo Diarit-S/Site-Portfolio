@@ -172,7 +172,7 @@ a {
 }
   
 .panels__panel--three {
-    background-image: url(../assets/nespresso.jpg);
+    background-image: url(../assets/earth.jpg);
 }
   
 .panels__panel--four {
@@ -383,4 +383,9 @@ opacity: 0.8;
         transform: scale(10,10);
     }
 
+
+    .website-link {
+        text-decoration: underline;
+        font-weight: bold;
+    }
 
