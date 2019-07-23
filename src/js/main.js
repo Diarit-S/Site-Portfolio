@@ -22,8 +22,10 @@ function hid() {
 
 Ð('button').addEventListener('click', function (e) {
 
-  Ð('skills-title').style.display = "block";
-  Ð('solarSyst').style.display = "block";
+  if (window.innerWidth>750) {
+    Ð('skills-title').style.display = "block";
+    Ð('solarSyst').style.display = "block";
+  }
   setTimeout(function () {
     Ð('buttontwo').classList.add('is-inlineblock')
   },6000);

@@ -1,9 +1,10 @@
 @include rotate-animation(clockwise, 360deg);
 @include rotate-animation(counterclockwise, -360deg);
 @include typewriting(typewriter, 0em, 5.8em); // line one, in large screen
-@include typewriting(typewritertwo, 0em, 7.4em); // line two, in large screen
-@include typewriting(typewriterthree, 0em, 10.42em); // line three, in large screen
-@include typewriting(typewriterfour, 0em, 18em); // line three, in large screen
+@include typewriting(typewritertwo, 0em, 7.38em); // line two, in large screen
+@include typewriting(typewriterthree, 0em, 10.34em); // line three, in large screen
+@include typewriting(typewriterfour, 0em, 9.1em); // line four, in large screen
+@include typewriting(typewriterfive, 0em, 11.2em); // line four, in large screen
 
 .center__bubbles {
 
@@ -142,6 +143,10 @@
 .description__line--fourth {
     top: 60vh;
     animation: typewriterfour 2s steps(25) 5.5s 1 normal both, blinkTextCursor 2s  5.5s  normal;
+}
+.description__line--fifth {
+    top: 70vh;
+    animation: typewriterfive 2s steps(25) 7.5s 1 normal both, blinkTextCursor 2s  7.5s  normal;
 }
 
 .valid {
