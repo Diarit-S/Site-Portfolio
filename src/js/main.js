@@ -32,6 +32,7 @@ function hid() {
   setTimeout(hid, 500);
   Ð('center__logo').classList.add('zoom');
   Ð('button').classList.add('hidden');
+  Ð('button').style.zIndex = '-3';
   e.stopPropagation();
 });
 
