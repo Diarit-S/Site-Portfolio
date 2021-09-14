@@ -22,5 +22,12 @@ body {
                 margin-bottom: 1rem;
             }
         }
+
+        &--description {
+            &__text {
+                max-width: 900px;
+                line-height: 1.8;
+            }
+        }
     }
 }
