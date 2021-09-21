@@ -1,5 +1,19 @@
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+
     background-color: #fff7e0;
     .section {
         height: 100vh;
@@ -27,6 +41,18 @@ body {
             &__text {
                 max-width: 900px;
                 line-height: 1.8;
+            }
+        }
+
+        &--skills {
+            &__wrapper {
+                &__types {
+                    display: flex;
+
+                    &__type {
+                        margin-right: 2rem;
+                    }
+                }
             }
         }
     }
