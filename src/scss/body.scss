@@ -91,12 +91,31 @@ body {
 
         &--skills {
             &__wrapper {
+                h3 {
+                    margin-bottom: 2rem;
+                }
                 &__types {
                     display: flex;
 
                     &__type {
-                        margin-right: 2rem;
+                        margin-right: 5rem;
+                        line-height: 1.5;
+
+                        h4 {
+                            margin-bottom: 1rem;
+                        }
                     }
+                }
+            }
+        }
+
+        &--achievements {
+            &__wrapper {
+                &__item {
+                    height: 200px;
+                    width: 200px;
+                    border-radius: 10px;
+                    border: 1px solid #000;
                 }
             }
         }
